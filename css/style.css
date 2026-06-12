@@ -5,7 +5,8 @@
   --text-muted: #475569;
   --bg-body: #f8fafc;
   --bg-card: #ffffff;
-  --color-primary: #27AE60;
+  --color-primary: #1c02ff;
+  --color-primary1: #1D8147;
   --color-secondary: #0f5f73;
   --gray-light: #e2e8f0;
   --gray-dark: #475569;
@@ -88,12 +89,12 @@ a {
   background: var(--text-primary);
   color: var(--text-white);
 }
-.btn-green {
-  background: var(--color-primary);
-  color: var(--text-white);
+.btn-white {
+  background: var(--text-white);
+  color: var(--text-primary);
 }
-.btn-green:hover {
-  background: #047934;
+.btn-white:hover {
+  background: #a3a5a7;
 }
 
 .splitscreen-body {
@@ -136,7 +137,6 @@ a {
 }
 .splitscreen-sites-left p {
   color: var(--text-white);
-  opacity: 0.8;
 }
 .splitscreen-sites-left h2 {
   color: var(--text-white);
@@ -182,7 +182,6 @@ a {
 .splitscreen-btn {
   font-size: 16px;
   padding: 16px 32px;
-  pointer-events: none;
 }
 
 .skip-link {
