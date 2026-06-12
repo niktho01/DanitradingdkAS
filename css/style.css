@@ -6,7 +6,6 @@
   --bg-body: #f8fafc;
   --bg-card: #ffffff;
   --color-primary: #1c02ff;
-  --color-primary1: #1D8147;
   --color-secondary: #0f5f73;
   --gray-light: #e2e8f0;
   --gray-dark: #475569;
@@ -24,6 +23,8 @@
 html, body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 html {
@@ -849,4 +850,111 @@ a {
 
 .contact-form button[type=submit]:hover {
   background-color: var(--color-secondary);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  padding: 0;
+  overflow: visible;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: var(--text-primary);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .header-cta {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav {
+    width: 300px;
+    height: auto;
+    background: var(--bg-card);
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding: 80px 40px 40px;
+    z-index: 90;
+    transition: top 0.4s ease;
+  }
+  .nav.is-open {
+    right: 0;
+  }
+  .nav-link {
+    font-size: 20px;
+    width: 100%;
+    padding: 16px 0;
+  }
+  .nav-link::after {
+    display: none;
+  }
+  .hamburger.is-active span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+    width: 30px;
+  }
+  .hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.is-active span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+    width: 30px;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .hero-overskrift {
+    padding-left: 0;
+  }
+  .branche-grid,
+  .produkt-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .footer-brand {
+    grid-column: 1/-1;
+  }
+  .footer-about {
+    max-width: 100%;
+  }
+  .herobillede {
+    order: 1;
+    margin-bottom: 16px;
+  }
+  .hero-overskrift {
+    order: 2;
+    margin-bottom: 16px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-lead {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    max-width: 75ch;
+  }
+  .hero-ctas {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=style.css.map */
